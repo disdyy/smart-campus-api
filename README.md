@@ -30,7 +30,7 @@ This project uses **in-memory data structures only** such as maps and lists. It 
 
 Base API path:
 
-`/api/v1`
+*`/api/v1`
 
 ## 2. Technology Stack
 
@@ -53,13 +53,13 @@ Base API path:
 6. Right-click the project and click **Run**.
 7. The API will run at:
 
-`http://localhost:8080/smart-campus-api/api/v1`
+*`http://localhost:8080/smart-campus-api/api/v1`
 
 ### Using Maven
 
 In the project root, run:
 
-`mvn clean install`
+*`mvn clean install`
 
 Then deploy the generated WAR file to Tomcat.
 
@@ -96,27 +96,27 @@ Then deploy the generated WAR file to Tomcat.
 
 ### 1. Discovery endpoint
 
-`curl -X GET http://localhost:8080/smart-campus-api/api/v1`
+*`curl -X GET http://localhost:8080/smart-campus-api/api/v1`
 
 ### 2. Create a room
 
-`curl -X POST http://localhost:8080/smart-campus-api/api/v1/rooms -H "Content-Type: application/json" -d '{"id":"LIB-301","name":"Library Quiet Study","capacity":80}'`
+*`curl -X POST http://localhost:8080/smart-campus-api/api/v1/rooms -H "Content-Type: application/json" -d '{"id":"LIB-301","name":"Library Quiet Study","capacity":80}'`
 
 ### 3. Get all rooms
 
-`curl -X GET http://localhost:8080/smart-campus-api/api/v1/rooms`
+*`curl -X GET http://localhost:8080/smart-campus-api/api/v1/rooms`
 
 ### 4. Create a valid sensor
 
-`curl -X POST http://localhost:8080/smart-campus-api/api/v1/sensors -H "Content-Type: application/json" -d '{"id":"CO2-001","type":"CO2","status":"ACTIVE","currentValue":420.0,"roomId":"LIB-301"}'`
+*`curl -X POST http://localhost:8080/smart-campus-api/api/v1/sensors -H "Content-Type: application/json" -d '{"id":"CO2-001","type":"CO2","status":"ACTIVE","currentValue":420.0,"roomId":"LIB-301"}'`
 
 ### 5. Filter sensors by type
 
-`curl -X GET "http://localhost:8080/smart-campus-api/api/v1/sensors?type=CO2"`
+*`curl -X GET "http://localhost:8080/smart-campus-api/api/v1/sensors?type=CO2"`
 
 ### 6. Add a sensor reading
 
-`curl -X POST http://localhost:8080/smart-campus-api/api/v1/sensors/CO2-001/readings -H "Content-Type: application/json" -d '{"value":455.7}'`
+*`curl -X POST http://localhost:8080/smart-campus-api/api/v1/sensors/CO2-001/readings -H "Content-Type: application/json" -d '{"value":455.7}'`
 
 ## 6. Video Demonstration
 
